@@ -35,6 +35,7 @@ function generateEmail() {
   const remaining = document.getElementById("remaining").value;
 
   const guestForm = document.getElementById("guestForm").value;
+  guestForm = "https://docs.google.com/forms/d/e/1FAIpQLSfv7fN11NWk3Gm46uG8LwCBTT9-9nfXXObHfQ-v60f6Y9TxgQ/alreadyresponded"; 
 
   const transport = document.getElementById("transport").checked;
 
@@ -55,7 +56,7 @@ ${boatLinks[index].value}
 
   if (transport) {
     transportText = `
-Transportation (round trip) from Panama City and the mandatory entrance fee to Guna Yala are not included in the price (around USD 120 per person).
+Transportation, round trip from Panama City (USD 120) and the mandatory entrance fee to Guna Yala(USD 22) are not included in the price. Around USD 120 + USD 22 per person.
 
 We’re happy to help you arrange all logistics 🙌
 `;
@@ -86,8 +87,11 @@ RESERVATION SUMMARY
 - Total reservation value: USD ${totalPrice}
 - Deposit payment received: USD ${deposit}
 - Remaining balance to be paid onboard: USD ${remaining}
+ *Payment on board must be made in cash.
 
-GUEST INFORMATION FORM
+GUEST INFORMATION FORM:
+Please complete the following form, this will provide us with the information needed to prepare and ensure your "Sailing the World" experience is complete.
+
 
 ${guestForm}
 
