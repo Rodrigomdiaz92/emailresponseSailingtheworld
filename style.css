@@ -1,0 +1,75 @@
+/* style.css */
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f4f4;
+}
+
+.container{
+  display:flex;
+  gap:20px;
+  padding:20px;
+}
+
+.form-section,
+.preview-section{
+  flex:1;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+input,
+textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  box-sizing:border-box;
+}
+
+textarea{
+  min-height:120px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+}
+
+button{
+  padding:12px 18px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.generate-btn{
+  width:100%;
+  background:#111;
+  color:white;
+}
+
+.copy-btn{
+  margin-top:10px;
+  background:#0a7d32;
+  color:white;
+}
+
+.checkbox{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+#output{
+  height:85vh;
+  background:white;
+}

@@ -1,0 +1,100 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sailing the World - Email Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="form-section">
+      <h1>Sailing the World</h1>
+      <h2>Booking Email Generator</h2>
+
+      <div class="card">
+        <h3>Guest Information</h3>
+
+        <input type="text" id="guestName" placeholder="Guest Name" />
+        <input type="email" id="guestEmail" placeholder="Guest Email" />
+        <input type="text" id="guestWhatsapp" placeholder="Guest WhatsApp" />
+
+        <div class="grid">
+          <input type="number" id="totalGuests" placeholder="Total Guests" />
+          <input type="number" id="adults" placeholder="Adults" />
+          <input type="number" id="children" placeholder="Children" />
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Reservation Details</h3>
+
+        <input type="date" id="checkin" />
+        <input type="date" id="checkout" />
+
+        <label class="checkbox">
+          <input type="checkbox" id="lateCheckout">
+          Late Checkout
+        </label>
+
+        <textarea id="observations" placeholder="Observations"></textarea>
+      </div>
+
+      <div class="card">
+        <h3>Boats</h3>
+
+        <div id="boatsContainer"></div>
+
+        <button type="button" onclick="addBoat()">
+          + Add Boat
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>Payments</h3>
+
+        <input type="number" id="totalPrice" placeholder="Total Price" />
+        <input type="number" id="deposit" placeholder="Deposit Paid" />
+        <input type="number" id="remaining" placeholder="Remaining Balance" />
+      </div>
+
+      <div class="card">
+        <h3>Links</h3>
+
+        <input type="text" id="guestForm" placeholder="Guest Form Link" />
+      </div>
+
+      <div class="card">
+        <h3>Transport</h3>
+
+        <label class="checkbox">
+          <input type="checkbox" id="transport" checked>
+          Include Transportation Info
+        </label>
+      </div>
+
+      <button class="generate-btn" onclick="generateEmail()">
+        Generate Email
+      </button>
+
+    </div>
+
+    <div class="preview-section">
+      <h2>Email Preview</h2>
+
+      <textarea id="output"></textarea>
+
+      <button class="copy-btn" onclick="copyEmail()">
+        Copy Email
+      </button>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
