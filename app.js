@@ -21,6 +21,8 @@ addBoat();
 function generateEmail() {
 
   const guestName = document.getElementById("guestName").value;
+  const guestMail = document.getElementById("guestEmail").value;
+  const guestWhatsApp = document.getElementById("guestWhatsapp").value;
   const totalGuests = document.getElementById("totalGuests").value;
   const adults = document.getElementById("adults").value;
   const children = document.getElementById("children").value;
@@ -35,7 +37,7 @@ function generateEmail() {
   const remaining = document.getElementById("remaining").value;
 
   const guestForm = document.getElementById("guestForm").value;
-  guestForm = "https://docs.google.com/forms/d/e/1FAIpQLSfv7fN11NWk3Gm46uG8LwCBTT9-9nfXXObHfQ-v60f6Y9TxgQ/alreadyresponded"; 
+  //guestForm = "https://docs.google.com/forms/d/e/1FAIpQLSfv7fN11NWk3Gm46uG8LwCBTT9-9nfXXObHfQ-v60f6Y9TxgQ/alreadyresponded"; 
 
   const transport = document.getElementById("transport").checked;
 
@@ -56,7 +58,7 @@ ${boatLinks[index].value}
 
   if (transport) {
     transportText = `
-Transportation, round trip from Panama City (USD 120) and the mandatory entrance fee to Guna Yala(USD 22) are not included in the price. Around USD 120 + USD 22 per person.
+Transportation, round trip from Panama City (USD 120) and the mandatory entrance fee to Guna Yala(USD 22) are not included in the price.
 
 We’re happy to help you arrange all logistics 🙌
 `;
@@ -69,8 +71,13 @@ We are happy to confirm your reservation with Sailing the World ✨
 
 Your booking is CONFIRMED.
 
-BOOKING DETAILS
+GUEST INFO
+-Name: ${guestName}
+-Mail: ${guestMail}
+-WhatsApp :${guestWhatsApp}
 
+
+BOOKING DETAILS
 - Check-in: ${checkin}
 - Check-out: ${checkout}
 
@@ -83,16 +90,15 @@ BOATS RESERVED
 ${boatsText}
 
 RESERVATION SUMMARY
-
 - Total reservation value: USD ${totalPrice}
 - Deposit payment received: USD ${deposit}
 - Remaining balance to be paid onboard: USD ${remaining}
  *Payment on board must be made in cash.
 
-GUEST INFORMATION FORM:
+GUEST FORM:
 Please complete the following form, this will provide us with the information needed to prepare and ensure your "Sailing the World" experience is complete.
 
-
+Click here to complete Form 👇
 ${guestForm}
 
 ABOUT SAILING THE WORLD
